@@ -29,8 +29,8 @@ def about_tab_content(url):
 
 
 st.title('Welcome to Black Python Dev Booth')
-tab_list = ['Home', 'About', 'Projects & Initiatives']
-home, about, projects = st.tabs(tab_list )
+tab_list = ['Home', 'About', 'Projects & Initiatives', 'Swag']
+home, about, projects, swag = st.tabs(tab_list)
 
 def page_tab():
     home.header('Black Python Devs at PyCon & how to support')
@@ -43,6 +43,9 @@ def about_tab():
 def projects_tab():
     projects.header('Our projects and some of the initiatives')
 
+def swag_tab():
+    swag.header('Purchase souvenirs')
+
 # rendering content on tabs
 with home:
     page_tab()
@@ -50,4 +53,5 @@ with about:
     about_tab()
 with projects:
     projects_tab()
-
+with swag:
+    swag_tab()
